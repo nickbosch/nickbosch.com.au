@@ -7,6 +7,10 @@ import normalize from "normalize.css";
 
 const globalStyles = css`
   ${normalize}
+  body {
+    font-family: "Avenir Next", "Nunito", "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 300;
+  }
 `;
 
 const Layout = ({ children }) => (

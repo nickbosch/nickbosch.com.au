@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Nick Bosch - Web Developer" />
+    <SEO />
     <svg
       clipRule="evenodd"
       fillRule="evenodd"

@@ -10,6 +10,7 @@ const globalStyles = css`
   body {
     font-family: "Avenir Next", "Nunito", "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 300;
+    color: rgb(10, 10, 10);
   }
 `;
 

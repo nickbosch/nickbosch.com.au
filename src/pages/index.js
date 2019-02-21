@@ -6,6 +6,22 @@ import SEO from "../components/seo";
 
 import Particles from "react-particles-js";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faFacebookMessenger,
+  faTwitter,
+  faGithub,
+  faBitbucket
+} from "@fortawesome/free-brands-svg-icons";
+
+const styleSocialIcon = css`
+  color: black;
+  text-decoration: none;
+  margin: 0 0.3rem;
+`;
+
 const IndexPage = () => (
   <Layout>
     <SEO />
@@ -155,31 +171,58 @@ const IndexPage = () => (
             <path d="m95.325 51.269h1.531c2.661 0 4.64.624 5.936 1.872s1.944 3.141 1.944 5.678v4.778c0 .676.076 1.279.228 1.81s.417.979.796 1.345c.379.365.886.644 1.521.837.634.193 1.427.29 2.378.29h.89v2.875h-.89c-1.006 0-1.83.083-2.472.248-.641.166-1.141.417-1.499.755-.359.338-.607.769-.745 1.293s-.207 1.144-.207 1.862v7.239c0 1.158-.138 2.203-.413 3.134-.276.931-.724 1.723-1.345 2.378-.62.655-1.434 1.159-2.441 1.51-1.006.352-2.233.528-3.681.528h-1.531v-2.896h1.241c3.185 0 4.778-1.551 4.778-4.654v-7.157c0-3.364 1.455-5.254 4.365-5.667-2.938-.317-4.406-2.213-4.406-5.688v-4.737c0-3.158-1.579-4.737-4.737-4.737h-1.241z" />
           </g>
         </svg>
-      </div>
-      <div
-        css={css`
-          text-align: center;
-          z-index: 2;
-          margin: 1rem 0 0 0;
-        `}
-      >
-        <h1
-          css={css`
-            text-transform: uppercase;
-            font-weight: 800;
-            margin: 1rem 0 0.1rem 0;
-          `}
-        >
-          Nick Bosch
-        </h1>
         <div
           css={css`
-            letter-spacing: 3px;
-            font-size: 1.1rem;
-            /* text-transform: uppercase; */
+            text-align: center;
+            z-index: 2;
+            margin: 1rem 0 0 0;
           `}
         >
-          Web Developer
+          <h1
+            css={css`
+              text-transform: uppercase;
+              font-weight: 800;
+              margin: 1rem 0 0.1rem 0;
+            `}
+          >
+            Nick Bosch
+          </h1>
+          <div
+            css={css`
+              letter-spacing: 3px;
+              font-size: 1.1rem;
+              /* text-transform: uppercase; */
+            `}
+          >
+            Web Developer
+          </div>
+        </div>
+        <div css={css`
+          text-align: center;
+          vertical-align: middle;
+          margin-top: 2rem;
+        `}>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faPhone} size="lg" />
+          </a>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faEnvelope} size="lg" color="#D14836" />
+          </a>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faFacebook} size="lg" color="#3B5998" />
+          </a>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faFacebookMessenger} size="lg" color="#0084FF" />
+          </a>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faTwitter} size="lg" color="#1DA1F2" />
+          </a>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faGithub} size="lg" color="#181717" />
+          </a>
+          <a href="#" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faBitbucket} size="lg" color="#0052CC" />
+          </a>
         </div>
       </div>
     </div>

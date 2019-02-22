@@ -3,11 +3,9 @@ import { css } from "@emotion/core";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import SocialLink from "../components/SocialLink";
 
 import Particles from "react-particles-js";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faFacebookMessenger,
@@ -15,12 +13,6 @@ import {
   faGithub,
   faBitbucket
 } from "@fortawesome/free-brands-svg-icons";
-
-const styleSocialIcon = css`
-  color: black;
-  text-decoration: none;
-  margin: 0 0.3rem;
-`;
 
 const IndexPage = () => (
   <Layout>
@@ -191,38 +183,43 @@ const IndexPage = () => (
             css={css`
               letter-spacing: 3px;
               font-size: 1.1rem;
-              /* text-transform: uppercase; */
             `}
           >
             Web Developer
           </div>
         </div>
-        <div css={css`
-          text-align: center;
-          vertical-align: middle;
-          margin-top: 2rem;
-        `}>
-          {/* <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faPhone} size="lg" />
-          </a>
-          <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faEnvelope} size="lg" color="#D14836" />
-          </a> */}
-          <a href="https://fb.me/nickboschwebdev" target="_blank" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faFacebook} size="2x" color="#3B5998" />
-          </a>
-          <a href="https://m.me/nickboschwebdev" target="_blank" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faFacebookMessenger} size="2x" color="#0084FF" />
-          </a>
-          <a href="https://twitter.com/nicholasbosch" target="_blank" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faTwitter} size="2x" color="#1DA1F2" />
-          </a>
-          <a href="https://github.com/nickbosch" target="_blank" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faGithub} size="2x" color="#181717" />
-          </a>
-          <a href="https://bitbucket.org/nickbosch" target="_blank" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faBitbucket} size="2x" color="#0052CC" />
-          </a>
+        <div
+          css={css`
+            text-align: center;
+            vertical-align: middle;
+            margin-top: 2rem;
+          `}
+        >
+          <SocialLink
+            href="https://fb.me/nickboschwebdev"
+            icon={faFacebook}
+            color="#3B5998"
+          />
+          <SocialLink
+            href="https://m.me/nickboschwebdev"
+            icon={faFacebookMessenger}
+            color="#0084FF"
+          />
+          <SocialLink
+            href="https://twitter.com/nicholasbosch"
+            icon={faTwitter}
+            color="#1DA1F2"
+          />
+          <SocialLink
+            href="https://github.com/nickbosch"
+            icon={faGithub}
+            color="#181717"
+          />
+          <SocialLink
+            href="https://bitbucket.org/nickbosch"
+            icon={faBitbucket}
+            color="#0052CC"
+          />
         </div>
       </div>
     </div>

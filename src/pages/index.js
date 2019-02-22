@@ -95,7 +95,7 @@ const IndexPage = () => (
             },
             move: {
               enable: true,
-              speed: 6,
+              speed: 5,
               direction: "none",
               random: false,
               straight: false,
@@ -135,7 +135,7 @@ const IndexPage = () => (
                 speed: 3
               },
               repulse: {
-                distance: 200
+                distance: 140
               },
               push: {
                 particles_nb: 4
@@ -160,8 +160,8 @@ const IndexPage = () => (
           strokeMiterlimit="1.41421"
           viewBox="0 0 141 141"
           xmlns="http://www.w3.org/2000/svg"
-          width="300"
-          height="300"
+          width="255"
+          height="255"
         >
           <circle cx="70.485" cy="70.485" fill="#43464B" r="70.485" />
           <g fill="#fff" fillRule="nonzero">
@@ -175,7 +175,7 @@ const IndexPage = () => (
           css={css`
             text-align: center;
             z-index: 2;
-            margin: 1rem 0 0 0;
+            margin: 2rem 0 0 0;
           `}
         >
           <h1
@@ -202,26 +202,26 @@ const IndexPage = () => (
           vertical-align: middle;
           margin-top: 2rem;
         `}>
-          <a href="#" css={styleSocialIcon}>
+          {/* <a href="#" css={styleSocialIcon}>
             <FontAwesomeIcon icon={faPhone} size="lg" />
           </a>
           <a href="#" css={styleSocialIcon}>
             <FontAwesomeIcon icon={faEnvelope} size="lg" color="#D14836" />
+          </a> */}
+          <a href="https://fb.me/nickboschwebdev" target="_blank" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faFacebook} size="2x" color="#3B5998" />
           </a>
-          <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faFacebook} size="lg" color="#3B5998" />
+          <a href="https://m.me/nickboschwebdev" target="_blank" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faFacebookMessenger} size="2x" color="#0084FF" />
           </a>
-          <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faFacebookMessenger} size="lg" color="#0084FF" />
+          <a href="https://twitter.com/nicholasbosch" target="_blank" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faTwitter} size="2x" color="#1DA1F2" />
           </a>
-          <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faTwitter} size="lg" color="#1DA1F2" />
+          <a href="https://github.com/nickbosch" target="_blank" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faGithub} size="2x" color="#181717" />
           </a>
-          <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faGithub} size="lg" color="#181717" />
-          </a>
-          <a href="#" css={styleSocialIcon}>
-            <FontAwesomeIcon icon={faBitbucket} size="lg" color="#0052CC" />
+          <a href="https://bitbucket.org/nickbosch" target="_blank" css={styleSocialIcon}>
+            <FontAwesomeIcon icon={faBitbucket} size="2x" color="#0052CC" />
           </a>
         </div>
       </div>

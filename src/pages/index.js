@@ -6,6 +6,8 @@ import SEO from "../components/seo";
 import SocialLink from "../components/SocialLink";
 
 import Particles from "react-particles-js";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import {
   faFacebook,
   faFacebookMessenger,
@@ -13,6 +15,8 @@ import {
   faGithub,
   faBitbucket
 } from "@fortawesome/free-brands-svg-icons";
+
+config.autoAddCss = false;
 
 const IndexPage = () => (
   <Layout>

@@ -177,7 +177,6 @@ const IndexPage = () => (
               animation-duration: 500ms;
               animation-delay: 500ms;
             }
-
           `}
         />
         <Logo />
@@ -186,6 +185,7 @@ const IndexPage = () => (
             text-align: center;
             z-index: 2;
             margin: 2rem 0 0 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           `}
         >
           <h1

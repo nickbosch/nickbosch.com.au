@@ -10,7 +10,7 @@ const globalStyles = css`
       sans-serif;
     font-weight: 300;
     color: #fff;
-    background: hsl(218deg, 6%, 28%);
+    background: hsl(218deg, 20%, 20%);
   }
 `
 

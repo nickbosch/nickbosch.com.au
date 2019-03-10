@@ -4,7 +4,7 @@ import { Global, css } from "@emotion/core"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SocialLink from "../components/SocialLink"
-import Logo from "../components/Logo"
+import Logo from "../images/logo.svg"
 
 import Particles from "react-particles-js"
 import { config } from "@fortawesome/fontawesome-svg-core"
@@ -12,7 +12,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import {
   faFacebook,
   faFacebookMessenger,
-  faTwitter,
+  faLinkedin,
   faGithub,
   faBitbucket,
 } from "@fortawesome/free-brands-svg-icons"
@@ -148,6 +148,7 @@ const IndexPage = () => (
       <div
         css={css`
           z-index: 2;
+          padding: 1rem;
         `}
       >
         <Global
@@ -161,25 +162,56 @@ const IndexPage = () => (
               }
             }
 
-            #nb {
+            @keyframes drawIn {
+              to {
+                stroke-dashoffset: 0;
+              }
+            }
+
+            #letters {
               opacity: 0;
               animation: fadeIn ease-in 1;
               animation-fill-mode: forwards;
               animation-duration: 500ms;
-              animation-delay: 750ms;
+              animation-delay: 1s;
             }
 
-            #left-brace,
-            #right-brace {
-              opacity: 0;
-              animation: fadeIn ease-in 1;
+            #left-brace-upper,
+            #left-brace-lower,
+            #right-brace-upper,
+            #right-brace-lower {
+              animation: drawIn ease-out 1;
               animation-fill-mode: forwards;
               animation-duration: 500ms;
               animation-delay: 500ms;
+              stroke-dasharray: 109;
+            }
+
+            #left-brace-upper {
+              stroke-dashoffset: -109;
+            }
+
+            #left-brace-lower {
+              stroke-dashoffset: 109;
+            }
+
+            #right-brace-upper {
+              stroke-dashoffset: -109;
+            }
+
+            #right-brace-lower {
+              stroke-dashoffset: 109;
             }
           `}
         />
-        <Logo />
+        <div
+          css={css`
+            max-width: 15rem;
+            margin: 0 auto;
+          `}
+        >
+          <Logo />
+        </div>
         <div
           css={css`
             text-align: center;
@@ -188,7 +220,7 @@ const IndexPage = () => (
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           `}
         >
-          <h1
+          {/* <h1
             css={css`
               text-transform: uppercase;
               font-weight: 800;
@@ -204,39 +236,56 @@ const IndexPage = () => (
             `}
           >
             Web Developer
-          </div>
+          </div> */}
         </div>
+        <h2
+          css={css`
+            font-weight: lighter;
+          `}
+        >
+          My new website is coming soon, stay tuned!
+        </h2>
         <div
           css={css`
             text-align: center;
             vertical-align: middle;
-            margin-top: 2rem;
+            margin: 2rem auto 0 auto;
+            padding: 1rem 0;
+            width: 14rem;
+            /* background: rgba(255, 255, 255, 0.5);
+            border: solid 1px rgba(255, 255, 255, 0.1);
+            border-radius: 10px; */
           `}
         >
           <SocialLink
             href="https://fb.me/nickboschwebdev"
             icon={faFacebook}
-            color="#3B5998"
+            color="rgba(255, 255, 255, 0.8)"
+            // color="#3B5998"
           />
           <SocialLink
             href="https://m.me/nickboschwebdev"
             icon={faFacebookMessenger}
-            color="#0084FF"
+            color="rgba(255, 255, 255, 0.8)"
+            // color="#0084FF"
           />
           <SocialLink
-            href="https://twitter.com/nicholasbosch"
-            icon={faTwitter}
-            color="#1DA1F2"
+            href="https://www.linkedin.com/in/nick-bosch/"
+            icon={faLinkedin}
+            color="rgba(255, 255, 255, 0.8)"
+            // color="#0077B5"
           />
           <SocialLink
             href="https://github.com/nickbosch"
             icon={faGithub}
-            color="#181717"
+            color="rgba(255, 255, 255, 0.8)"
+            // color="#181717"
           />
           <SocialLink
             href="https://bitbucket.org/nickbosch"
             icon={faBitbucket}
-            color="#0052CC"
+            color="rgba(255, 255, 255, 0.8)"
+            // color="#0052CC"
           />
         </div>
       </div>

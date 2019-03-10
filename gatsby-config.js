@@ -5,13 +5,12 @@ module.exports = {
     author: `@nicholasbosch`,
   },
   plugins: [
+    `gatsby-plugin-react-svg`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Nunito:300,400,700,900`
-        ]
-      }
+        fonts: [`Nunito:300,400,700,900`],
+      },
     },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,

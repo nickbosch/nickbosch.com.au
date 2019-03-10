@@ -177,11 +177,11 @@ const IndexPage = () => (
             }
 
             #n {
-              animation-delay: 1s;
+              animation-delay: 1.4s;
             }
 
             #b {
-              animation-delay: 1.1s;
+              animation-delay: 1.5s;
             }
 
             #left-brace-upper,
@@ -190,7 +190,7 @@ const IndexPage = () => (
             #right-brace-lower {
               animation: drawIn ease-out 1;
               animation-fill-mode: forwards;
-              animation-duration: 500ms;
+              animation-duration: 1s;
               animation-delay: 500ms;
               stroke-dasharray: 109;
             }
@@ -249,6 +249,8 @@ const IndexPage = () => (
         <h2
           css={css`
             font-weight: lighter;
+            opacity: 0;
+            animation: 300ms ease-in 1.6s 1 fadeIn forwards;
           `}
         >
           My new website is coming soon, stay tuned!
@@ -260,9 +262,8 @@ const IndexPage = () => (
             margin: 2rem auto 0 auto;
             padding: 1rem 0;
             width: 14rem;
-            /* background: rgba(255, 255, 255, 0.5);
-            border: solid 1px rgba(255, 255, 255, 0.1);
-            border-radius: 10px; */
+            opacity: 0;
+            animation: 300ms ease-in 1.7s 1 fadeIn forwards;
           `}
         >
           <SocialLink

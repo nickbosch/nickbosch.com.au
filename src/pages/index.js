@@ -168,12 +168,20 @@ const IndexPage = () => (
               }
             }
 
-            #letters {
+            #n,
+            #b {
               opacity: 0;
               animation: fadeIn ease-in 1;
               animation-fill-mode: forwards;
-              animation-duration: 500ms;
+              animation-duration: 400ms;
+            }
+
+            #n {
               animation-delay: 1s;
+            }
+
+            #b {
+              animation-delay: 1.1s;
             }
 
             #left-brace-upper,

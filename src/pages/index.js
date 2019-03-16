@@ -192,23 +192,23 @@ const IndexPage = () => (
               animation-fill-mode: forwards;
               animation-duration: 1s;
               animation-delay: 500ms;
-              stroke-dasharray: 109;
+              stroke-dasharray: 150;
             }
 
             #left-brace-upper {
-              stroke-dashoffset: -109;
+              stroke-dashoffset: -150;
             }
 
             #left-brace-lower {
-              stroke-dashoffset: 109;
+              stroke-dashoffset: 150;
             }
 
             #right-brace-upper {
-              stroke-dashoffset: -109;
+              stroke-dashoffset: -150;
             }
 
             #right-brace-lower {
-              stroke-dashoffset: 109;
+              stroke-dashoffset: 150;
             }
           `}
         />

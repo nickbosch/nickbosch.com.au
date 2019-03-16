@@ -253,7 +253,7 @@ const IndexPage = () => (
             animation: 300ms ease-in 1.6s 1 fadeIn forwards;
           `}
         >
-          My new website is coming soon, stay tuned!
+          New website coming soon
         </h2>
         <div
           css={css`

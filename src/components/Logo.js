@@ -82,7 +82,7 @@ class Logo extends Component {
     //   </div>
     // )
 
-    return ()
+    return null
   }
 }
 

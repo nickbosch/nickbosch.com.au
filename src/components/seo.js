@@ -51,8 +51,14 @@ function SEO({ description, lang, meta, title }) {
                 name: `twitter:description`,
                 content: metaDescription,
               },
-            ]
-              .concat(meta)}
+            ].concat(meta)}
+            link={[
+              {
+                rel: "stylesheet",
+                href:
+                  "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Montserrat:200,600&display=swap",
+              },
+            ]}
           />
         )
       }}

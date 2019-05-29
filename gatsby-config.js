@@ -6,12 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-svg`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Nunito:300,400,700,900`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Nunito:300,400,700,900`],
+    //   },
+    // },
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {

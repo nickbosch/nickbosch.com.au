@@ -1,16 +1,25 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
+import { ThemeProvider } from 'emotion-theming'
 import { Global, css } from "@emotion/core"
 
-const globalStyles = css`
+import theme from "../styles/theme"
+
+const globalStyles = theme => css`
+  
+  ::selection {
+    background: #333;
+    color: #fff;
+  }
+  
   body {
     font-family: "Avenir Next", "Nunito", "Helvetica Neue", Helvetica,
       sans-serif;
     font-weight: 300;
     color: #fff;
-    background: hsl(218deg, 15%, 20%);
+    background: ${theme.colors.bodyBackground};
+    transition: all 400ms linear;
   }
 `
 
@@ -26,10 +35,10 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <ThemeProvider theme={theme}>
         <Global styles={globalStyles} />
         <main>{children}</main>
-      </div>
+      </ThemeProvider>
     )}
   />
 )

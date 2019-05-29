@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-exports.onCreateWebpackConfig = ({ actions, stage }) => {
+exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
   // If production JavaScript and CSS build
   if (stage === "build-javascript") {
     // Turn off source maps
@@ -14,13 +14,16 @@ exports.onCreateWebpackConfig = ({ actions, stage }) => {
       devtool: false,
     })
   }
-}
-
-exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === "build-html") {
-    config.loader("null", {
-      test: /scroll-to/,
-      loader: "null-loader",
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /scroll-to/,
+            use: loaders.null()
+          },
+        ],
+      },
     })
   }
 }

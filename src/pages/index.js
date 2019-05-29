@@ -256,7 +256,7 @@ export default () => {
           </FullScreen>
         </Trigger>
         <Trigger
-          offset={window.innerHeight * 0.9}
+          offset={typeof window !== "undefined" && window.innerHeight * 0.9}
           styles={css`
             opacity: 0;
           `}
@@ -338,7 +338,7 @@ export default () => {
           </FullScreen>
         </Trigger>
         <Trigger
-          offset={window.innerHeight * 0.9}
+          offset={typeof window !== "undefined" && window.innerHeight * 0.9}
           styles={css`
             ${Client} {
               opacity: 0;
@@ -406,7 +406,7 @@ export default () => {
         </Trigger>
         <Trigger
           hasEntered
-          offset={window.innerHeight * 0.9}
+          offset={typeof window !== "undefined" && window.innerHeight * 0.9}
           styles={css`
             transition: all 400ms linear;
             color: ${theme.colors.bodyBackground} !important;

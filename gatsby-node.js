@@ -8,10 +8,19 @@
 
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
   // If production JavaScript and CSS build
-  if (stage === 'build-javascript') {
+  if (stage === "build-javascript") {
     // Turn off source maps
     actions.setWebpackConfig({
       devtool: false,
-    });
+    })
   }
-};
+}
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  if (stage === "build-html") {
+    config.loader("null", {
+      test: /scroll-to/,
+      loader: "null-loader",
+    })
+  }
+}

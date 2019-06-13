@@ -1,7 +1,7 @@
-module.exports = {
+const cfg = {
   siteMetadata: {
     title: `Nick Bosch - Web Developer`,
-    description: `Web Developer`,
+    description: `I’m Nick, a web developer based in Sydney and the Southern Highlands. I have a strong background in website development and data science and have been helping people get online for nearly ten years! I’ve worked with a range of individuals and businesses to successfully develop and implement their online strategy.`,
     author: `@nicholasbosch`,
   },
   plugins: [
@@ -40,3 +40,18 @@ module.exports = {
     // 'gatsby-plugin-offline',
   ],
 }
+
+// use Netlify context to ensure we are in production
+if (process.env.CONTEXT === "production") {
+  cfg.plugins.push({
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      trackingIds: process.env.GA_TRACKING_ID,
+      pluginConfig: {
+        head: false,
+      },
+    },
+  })
+}
+
+module.exports = cfg

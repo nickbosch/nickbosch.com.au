@@ -476,11 +476,11 @@ export default () => {
               </div>
               <CenterText>
                 <p>
-                   These days it’s almost impossible to avoid having an online
+                  These days it’s almost impossible to avoid having an online
                   presence and often a website alone isn’t enough. You should
                   definitely be considering social media, email marketing and
                   online advertising, just to name a few things. I can help with
-                  all of this! 
+                  all of this!
                 </p>
                 <p>
                   Every successful online presence starts with a clear message

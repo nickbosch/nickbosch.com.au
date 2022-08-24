@@ -110,7 +110,7 @@ const Contact = () => {
               css={theme => css`
                 font-size: 1.33rem;
                 ${theme.layout.breakpoints.tabletPortrait} {
-                  font-size: 2rem;
+                  font-size: 1.95rem;
                 }
                 margin: 0 0 0.2rem 0;
                 font-family: "Montserrat", sans-serif;
@@ -162,7 +162,7 @@ const Contact = () => {
               css={theme => css`
                 font-size: 1.33rem;
                 ${theme.layout.breakpoints.tabletPortrait} {
-                  font-size: 2rem;
+                  font-size: 1.95rem;
                 }
                 margin: 0 0 0.2rem 0;
                 font-family: "Montserrat", sans-serif;
